@@ -1,8 +1,8 @@
 #include <iostream>
 
-int main(int argc, char const *argv[])
+main()
 {
     std::cout<<"Hellooo\n\n";
+    
     system("pause");
-    return 0;
 }
