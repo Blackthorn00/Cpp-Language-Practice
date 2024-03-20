@@ -34,6 +34,10 @@ private:
 
 public:
     Cuboid(int h) { height = h; } // Constructor
+    Cuboid (int h, int l, int b): Rectangle(l,b)
+    {
+        cout<<"Parameter of Cuboid "<<h<<endl;
+    }
     int getHeight() { return height; }
     void setHeight(int h) { height = h; }
     int volume() { return getLength() * getBreadth() * height; }
@@ -49,9 +53,7 @@ int main()
         cout << "The rectangle is actually a square!" << endl;
     }
 
-    Cuboid c(5);
-    c.setLength(10);
-    c.setBreadth(7);
+    Cuboid c(5, 7, 10);
     cout<<c.volume()<<endl;
     return 0;
 }
