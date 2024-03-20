@@ -1,36 +1,53 @@
 #include <iostream>
-
 using namespace std;
 
-class Base
+class Employee
 {
-    public: 
-    int x;
-    void show()
+private:
+    int eID;
+    string name;
+
+public:
+    Employee(int e, string n)
     {
-        cout<<x<<endl;
+        eID = e;
+        name = n;
     }
+    int getEmployeeID() { return eID; }
+    string getEmployeeName() { return name; }
 };
 
-class Derived:public Base
+class FullTimeEmployee : public Employee
 {
-    public:
-    int y;
-    void display()
+private:
+    int salary;
+
+public:
+    FullTimeEmployee(int e, string n, int sal) : Employee(e, n)
     {
-        cout<<x<<" "<<y<<endl;
+        salary = sal;
     }
+    int getSalary() { return salary; }
+};
+
+class PartTimeEmployee : public Employee
+{
+private:
+    int wage;
+
+public:
+    PartTimeEmployee(int e, string n, int w) : Employee(e, n)
+    {
+        wage = w;
+    }
+    int getWage() { return wage; }
 };
 
 int main()
 {
-    Base b;
-    b.x=25;
-    b.show();
-
-    Derived d;
-    d.x=10;
-    d.y=15;
-    d.show();
-    d.display();
+    FullTimeEmployee emp1(112, "John Smith", 1200);
+    PartTimeEmployee emp2(244, "Jessica Jones", 300);
+    cout << "Salary of " << emp1.getEmployeeName << " is" << emp1.getSalary << endl;
+    cout << "Daily wage of " << emp2.getEmployeeName << " is" << emp2.getWage << endl;
+    return 0;
 }
