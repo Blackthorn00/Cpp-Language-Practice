@@ -4,36 +4,37 @@ using namespace std;
 
 class NumGuess
 {
-private:
+public:
     int tries = 4, guess;
 
-public:
-    bool isGuessCorrect(int x);
-};
-
-bool NumGuess::isGuessCorrect(int x)
-{
-    int *tr = &tries, *g = &guess;
-    cout << "Guess the number between 0 and 100: ";
-    cin >> *g;
-    while (*tr > 0)
+    // public:
+    NumGuess(int t)
     {
-        if (*g == x)
-            return true;
-        cout<< "Tries remaining:"<< *tr<< *g<< endl;
-        cout << "Wrong! Try again: ";
-        cin >> *g;
-        *tr; 
+        tries = t;
     }
-    return false;
-}
+    bool isGuessCorrect(int x)
+    {
+        cout << "Guess the number between 0 and 100: ";
+        cin >> guess;
+        while (tries > 0)
+        {
+            if (guess == x)
+                return true;
+            cout << "Tries remaining:" << tries << endl;
+            cout << "Wrong! Try again: ";
+            cin >> guess;
+            tries--;
+        }
+        return false;
+    }
+};
 
 int main()
 {
-    NumGuess num;
-    int x = (rand() % 100) + 1;
-    cout<< x<< endl;
-    // int x = rand() % 2;
+    NumGuess num(4);
+    // int x = (rand() % 100) + 1;
+    int x = rand() % 2;
+    cout << x << endl;
     if (num.isGuessCorrect(x))
     {
         cout << "Congratulations! Your guess is correct!" << endl;
