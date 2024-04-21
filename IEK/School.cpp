@@ -3,29 +3,23 @@
 #include <string>
 using namespace std;
 
-/*class student
-vector students
-addstudent
-deletestudent
-*/
-
 class Student{
 private:
     string firstName;
     string lastName;
     int grade;
 public:
-    Student(const string& f,const string& l,const int& g) :
+    Student(const string& f, const string& l, const int& g) :
     firstName(f), lastName(l), grade(g) {}
-    string getFirstName()
+    string getFirstName() const
     {
         return firstName;
     }
-    string getLastName()
+    string getLastName() const
     {
         return lastName;
     }
-    int getGrade()
+    int getGrade() const
     {
         return grade;
     }
@@ -55,6 +49,6 @@ int main()
     Management management;
     Student student("Vagelis", "Mileounis", 9); 
     management.addStudent(student);
-    // management.displayStudents();
+    management.displayStudents();
     return 0;
 }
