@@ -25,7 +25,6 @@ public:
         w.wordToGuess = w.words[rand() % w.words.size()];
         w.guessedWord = string(w.wordToGuess.length(), '_');
         w.incorrectGuesses = 0;
-        //  word.push_back(w);
     }
     void displayHangman()
     {
