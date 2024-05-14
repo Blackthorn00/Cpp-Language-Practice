@@ -6,7 +6,7 @@ float add(float x, float y);
 float sub(float x, float y);
 float divis(float x, float y);
 float multi(float x, float y);
-float mod(int x, int y);
+int mod(int x, int y);
 int menu();
 void enterNum(float *x, float *y);
 
@@ -39,7 +39,7 @@ int main()
             break;
         case 6:
             enterNum(&a,&b);
-            cout<<a<<b;
+            // cout<<a<<b;
             break;
         case 7:
             exit(0);
@@ -64,16 +64,19 @@ float sub(float x, float y)
 }
 float divis(float x, float y)
 {
-    if (y == 0)
+    if (y == 0) {
         cout << "Division by 0 is not allowed" << endl;
-    else
+    }  
+    else{
         return x / y;
+    }
+        
 }
 float multi(float x, float y)
 {
     return x * y;
 }
-float mod(int x, int y)
+int mod(int x, int y)
 {
     return (int)x % y;
 }

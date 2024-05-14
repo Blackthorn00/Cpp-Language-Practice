@@ -1,4 +1,6 @@
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
@@ -31,9 +33,9 @@ public:
 
 int main()
 {
+    srand(time(0));
     NumGuess num(4);
-    // int x = (rand() % 100) + 1;
-    int x = rand() % 2;
+    int x = rand() % 101;
     cout << x << endl;
     if (num.isGuessCorrect(x))
     {
