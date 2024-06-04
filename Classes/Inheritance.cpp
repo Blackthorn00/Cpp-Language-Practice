@@ -47,7 +47,7 @@ int main()
 {
     FullTimeEmployee emp1(112, "John Smith", 1200);
     PartTimeEmployee emp2(244, "Jessica Jones", 300);
-    cout << "Salary of " << emp1.getEmployeeName << " is" << emp1.getSalary << endl;
-    cout << "Daily wage of " << emp2.getEmployeeName << " is" << emp2.getWage << endl;
+    cout << "Salary of " << emp1.getEmployeeName() << " is" << emp1.getSalary() << endl;
+    cout << "Daily wage of " << emp2.getEmployeeName() << " is" << emp2.getWage() << endl;
     return 0;
 }
