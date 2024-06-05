@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
+#include <string>
 
 using namespace std;
 /* Γράψε ένα πρόγραμμα σε C++ το οποίο θα ρωτάει αν θέλετε να διαβάσετε ή να γράψετε σε ένα αρχείο. Στη συνέχεια,
@@ -15,8 +16,10 @@ public:
 void Files::readFile()
 {
     ifstream readFile("Hello.txt");
-    while ()
+    string line;
+    while (getline(readFile, line))
     {
+        cout << line << endl;
     }
 }
 
