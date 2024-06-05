@@ -1,0 +1,10 @@
+    // f.name = "Orange";
+    // fruit.push_back(f);
+    // f.name = "Kiwi";
+    // fruit.push_back(f);
+    // f.name = "Strawberry";
+    // fruit.push_back(f);
+    // f.name = "Pineapple";
+    // fruit.push_back(f);
+    // f.name = "Banana";
+    // fruit.push_back(f);
