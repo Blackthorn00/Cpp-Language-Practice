@@ -11,6 +11,7 @@ int main()
     vector<int> inputVec; //Αρχικοποίηση Vector για αποθήκευση των στοιχείων του input.txt
     ifstream inputFile("input.txt");
     int num;
+    
     while (inputFile >> num) //Aποθήκευση των στοιχείων στο vector
     {
         inputVec.push_back(num);
